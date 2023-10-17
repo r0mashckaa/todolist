@@ -2,20 +2,9 @@ const inputEl = document.getElementById('example')
 const btnEl = document.querySelector('.kn')
 const spisokEl = document.querySelector('.spisok')
 
-const todoList = [
-    {
-        id: 1,
-        text: 'some text',
-        isDone: false 
-    },
-    {
-        id: 2,
-        text: 'someasdasdtext',
-        isDone: true
-    }
-]
+const todoList = []
 
-let id = 3
+let id = 1
 
 function render() {
     spisokEl.innerHTML=''

@@ -1,8 +1,6 @@
-
 <script>
     import { createEventDispatcher } from "svelte";
     const dispatch = createEventDispatcher();
-
 
     let inputValue = '';
 
@@ -20,9 +18,6 @@
     
     <input class="controls_input" type="text" bind:value={inputValue}>
     <button class="controls_btn" on:click = {onClick} >Добавить</button>
-
-
-
 </div>
 
 
@@ -43,5 +38,4 @@
         border-radius: 0 20px 20px 0;
         background-color: rgb(255, 221, 0);
     }
-
 </style>

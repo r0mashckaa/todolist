@@ -6,8 +6,6 @@
     
     let id = 0;
     
-
-
     function onChangeStatus(event){
         const item = items.find((i) => i.id === event.detail.id);
         item.isDone = !item.isDone;
@@ -33,8 +31,6 @@
         localStorage.setItem('items', JSON.stringify(items));
     }
 
-    console.log(items);
-
     onMount(()=>{
         if(localStorage.key('items')){
             items = JSON.parse(localStorage.getItem('items'));
@@ -44,15 +40,12 @@
             if( id < i.id){
                 id = i.id;
             }
-            
         })
         id++
         }
     });
-
-
-
 </script>
+
 <div class="app">
     <Contols on:add = {onAddItem}/>
 
@@ -60,15 +53,7 @@
         {#each items as item }
             <Item id={item.id} text={item.text} isDone={item.isDone} on:change={onChangeStatus} on:remove={onDeleteItem}/>
         {/each}
-        
-
-
-    </div>
-
-
-
-
-
+</div>
 </div>
 
 <style>
@@ -81,7 +66,6 @@
         display: flex;
         flex-direction: column;
         gap: 30px;
-        
     }
 
     .field{
